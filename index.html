@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importancia de la Navidad</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #8b0000;
+        }
+
+        .title-banner, .section-banner {
+            width: calc(100% - 300px); 
+            max-width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .banner {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        video {
+            width: 100%;
+            border: 3px solid #2a9d8f;
+            border-radius: 10px;
+        }
+
+        .content {
+            font-size: 18px;
+            color: #000000;
+            margin: 0 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .frame {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .frame .left,
+        .frame .right {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            background-image: url("uwu.jpg");
+            background-repeat: repeat-y;
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .frame .left {
+            left: 0;
+        }
+
+        .frame .right {
+            right: 0;
+        }
+
+        .experience {
+            font-size: 18px;
+            color: #004d99;
+            margin: 20px 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border: 2px solid #004d99;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Música de fondo -->
+    <audio id="background-music" src="luduu.mp3" preload="auto" loop></audio>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        audio.volume = 0.6; 
+        setTimeout(() => {
+            audio.play();
+        }, 1000); // Retraso de 1 segundo
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+    <button onclick="toggleMusic()">Reproducir/Pausar Música</button>
+
+    <img src="titulo.png" alt="Importancia de la Navidad" class="title-banner">
+
+    <div class="banner">
+        <video src="luces.mp4" autoplay loop muted></video>
+    </div>
+
+    <div class="frame">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <img src="razon.png" alt="Razon de esta pagina web" class="section-banner">
+
+    <div class="content">
+        <p>
+            La Navidad es una epoca que nos invita a reflexionar sobre la importancia del amor, la generosidad y la union familiar. Es un momento para compartir con seres queridos y recordar los valores que nos hacen mejores personas. La magia de la Navidad radica en la esperanza y en el deseo de construir un mundo mas amable y solidario, donde todos puedan disfrutar de momentos de felicidad y paz.
+        </p>
+    </div>
+
+    <img src="expe.png" alt="Experiencias personales" class="section-banner">
+
+    <div class="experience">
+        <p>
+            Una de las experiencias mas memorables que tengo de la Navidad es la union familiar que se genera al decorar el arbol y preparar la cena juntos. El ambiente se llena de risas y recuerdos, mientras se comparten anecdotas y se crean nuevas memorias. Este tiempo especial me recuerda la importancia de valorar a quienes tenemos cerca y de expresar nuestra gratitud por su compania y amor.
+        </p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
